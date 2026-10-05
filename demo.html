@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigwheels</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: #111;
+        }
+
+        .auto-section {
+            width: 100%;
+            padding: 24px 22px 30px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        .auto-section h1 {
+            margin: 0 0 14px 8px;
+            font-size: 34px;
+            font-weight: 600;
+        }
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 48px;
+            padding-left: 8px;
+            border-bottom: 1px solid;
+            margin-bottom: 37px;
+        }
+
+        .tab {
+            position: relative;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #555;
+            font-size: 25px;
+        }
+
+        .tab.active {
+            color: #e3262e;
+        }
+
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 255px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: 0.3s ease;
+
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.03);
+        }
+
+
+
+        .card-title {
+            min-height: 83px;
+
+            padding: 13px 14px 6px;
+
+            font-size: 20px;
+
+            line-height: 1.75;
+
+            font-weight: 400;
+        }
+
+        /* Bottom Details */
+        .meta {
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 0 14px;
+
+            color: #777;
+
+            font-size: 17px;
+        }
+
+        /* Clock */
+        .clock {
+            width: 19px;
+            height: 19px;
+
+            border-radius: 50%;
+
+            background-color: #777;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 14px;
+        }
+
+        /* Views */
+        .views {
+            margin-left: auto;
+        }
+
+        /* All News Link */
+        .all-news {
+            display: block;
+
+            width: max-content;
+
+            margin: 27px auto 0;
+
+            color: #005bd8;
+
+            text-decoration: none;
+
+            font-size: 25px;
+        }
+
+        .all-news:hover {
+            text-decoration: underline;
+        }
+
+
+
+        @media (max-width: 1200px) {
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .auto-section {
+                padding: 18px 12px 24px;
+            }
+
+            .auto-section h1 {
+                font-size: 28px;
+                margin-left: 4px;
+            }
+
+            .tabs {
+                gap: 20px;
+
+                padding-left: 4px;
+
+                overflow-x: auto;
+            }
+
+            .tab {
+                font-size: 20px;
+
+                white-space: nowrap;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image {
+                height: 220px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="auto-section">
+        <h1>
+            Latest Auto Updates
+        </h1>
+
+        <nav class="tabs">
+            <a href="#" class="tab active">Latest</a>
+            <a href="#" class="tab active">Reviews</a>
+            <a href="#" class="tab active">Videos</a>
+            <a href="#" class="tab active">Web Stories</a>
+        </nav>
+
+        <div class="cards">
+            <article class="card">
+                <div class="card-iamge">
+                    <img src="https://media.zigcdn.com/media/content/2026/Sep/cover_6aae400724f26.png?tr=w-320"
+                        alt="car">
+                </div>
+                <div class="card-title">
+                    EXCLUSIVE:Tata Tigor To Be
+                    Replaced By Tata Aeris
+                </div>
+                <div class="meta">
+                    <span class="clock">
+                        ◷
+                    </span>
+                    <span>
+                        19 Sep,2026
+                    </span>
+                    <span class="views">
+                        3613 views
+                    </span>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <div class="card-iamge">
+                    <img src="https://media.zigcdn.com/media/content/2026/Sep/cover_6aada10c17c88.png?tr=w-320"
+                        alt="Scooter">
+                </div>
+                <div class="card-title">
+                    Simple Wave Review:
+                    The Perfect Allrounder?
+                </div>
+                <div class="meta">
+                    <span class="clock">
+                        ◷
+                    </span>
+                    <span>
+                        19 Sep,2026
+                    </span>
+                    <span class="views">
+                        404 views
+                    </span>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <div class="card-iamge">
+                    <img src="https://media.zigcdn.com/media/content/2026/Sep/cover_6aad588470c45.png?tr=w-320"
+                        alt=" Blue car">
+                </div>
+                <div class="card-title">
+                    Maruti Finally Launches AMT
+                    For Dzire,Baleno,Swift S-CNG Now
+                </div>
+                <div class="meta">
+                    <span class="clock">
+                        ◷
+                    </span>
+                    <span>
+                        18 Sep,2026
+                    </span>
+                    <span class="views">
+                        671 views
+                    </span>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <div class="card-iamge">
+                    <img src="https://media.zigcdn.com/media/content/2026/Sep/cover_6aace30d44ed8.jpg?tr=w-320"
+                        alt="Motorcycle">
+                </div>
+                <div class="card-title">
+                    Ducati Desmo450 SM Revealed:
+                    Could This Be India's Next...
+                </div>
+                <div class="meta">
+                    <span class="clock">
+                        ◷
+                    </span>
+                    <span>
+                        18 Sep,2026
+                    </span>
+                    <span class="views">
+                        680 views
+                    </span>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <div class="card-iamge">
+                    <img src="https://media.zigcdn.com/media/content/2026/Sep/cover_6aad08de30da8.jpg?tr=w-320"
+                        alt="Motorcycles">
+                </div>
+                <div class="card-title">
+                    BREAKING: TVS Apache,Ronin
+                    Get A Bunch Of new Variants And
+                </div>
+                <div class="meta">
+                    <span class="clock">
+                        ◷
+                    </span>
+                    <span>
+                        17 Sep,2026
+                    </span>
+                    <span class="views">
+                        2110 views
+                    </span>
+                </div>
+            </article>
+        </div>
+
+        <a href="#" class="all-news">
+            All News Updates
+        </a>
+    </section>
+</body>
+
+</html>

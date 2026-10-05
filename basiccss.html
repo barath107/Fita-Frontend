@@ -96,7 +96,7 @@
 
     </style> -->
 
-    <div class="red square"></div>
+    <!-- <div class="red square"></div>
     <div class="green square"></div>
     <div class="blue square"></div>
 
@@ -111,6 +111,7 @@
             position:absolute;
             z-index: -1;
             margin: 10px;
+            
         }
         .green {
             background-color: green;
@@ -120,10 +121,88 @@
         }
         .blue {
             background-color: blue;
-            /* position: absolute; */
-            z-index: -3;
+            /* position: absolute; */ 
+             z-index: -3;
+            
             
         }
+    </style> -->
+
+    <style>
+        .flex-box {
+            display: grid;
+            background-color: salmon;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+        
+       
     </style>
+
+    <style>
+        .card {
+            display: grid;
+            background-color: salmon;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 640px) {
+            .card {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+       @media (min-width: 641px) and (max-width: 1200px) {
+            .card {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1201px) {
+            .card {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+    
+
+    <div class="card">
+        <div>card 1</div>
+        <div>card 1</div>
+        <div>card 1</div>
+    </div>
+
+
+    <div class="flex-box">
+        <div style="background-color: red;padding:20px;">Test 1</div>
+        <div style="background-color: blue;padding:20px;">Test 2</div>
+        <div style="background-color: green;padding:20px;">Test 3</div>
+    </div>
+    <style>
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;
+            transform: scale(1.2);
+        }
+        a:active{
+            color: green;
+            text-decoration: underline;
+        }
+        a::after{
+            content: " (external link)";
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+    <a href="https://www.google.com">Google</a>
 </body>
 </html>
