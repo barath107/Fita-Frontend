@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillTrack — Personal Learning Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span> SkillTrack</div>
+      <div class="nav-label">Workspace</div>
+      <nav class="nav">
+        <button class="active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button data-page="skills"><span>◈</span> My Skills</button>
+        <button data-page="goals"><span>◎</span> Learning Goals</button>
+        <button data-page="tasks"><span>✓</span> Daily Tasks</button>
+        <button data-page="notes"><span>▤</span> Personal Notes</button>
+      </nav>
+      <div class="sidebar-bottom"><strong>Keep going!</strong>
+        <p id="sideTip">Small consistent steps become remarkable progress.</p><button data-page="tasks">View today's
+          tasks →</button>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn">☰</button>
+        <div class="welcome">
+          <h1 id="pageHeading">Good afternoon, Bharath <span>👋</span></h1>
+          <p id="dateText"></p>
+        </div>
+        <div class="top-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+          <div class="avatar">AL</div>
+        </div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="stats">
+          <div class="card stat">
+            <div class="stat-icon purple">◔</div>
+            <div><small>Overall progress</small><strong id="overallStat">68%</strong><span class="trend">↗ 8%</span>
+            </div>
+          </div>
+          <div class="card stat">
+            <div class="stat-icon teal">✓</div>
+            <div><small>Tasks completed</small><strong id="taskStat">0/0</strong><span class="trend">this week</span>
+            </div>
+          </div>
+          <div class="card stat">
+            <div class="stat-icon orange">♨</div>
+            <div><small>Learning streak</small><strong id="streakStat">0 days</strong><span class="trend">Keep it
+                up!</span></div>
+          </div>
+          <div class="card stat">
+            <div class="stat-icon pink">◈</div>
+            <div><small>Active skills</small><strong id="skillStat">0</strong><span class="trend">in progress</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-main">
+          <div class="card chart-card">
+            <div class="card-head">
+              <div>
+                <h2>Learning activity</h2>
+                <p>Your focused learning time this week</p>
+              </div><select class="filter" id="chartRange">
+                <option>This week</option>
+                <option>Last week</option>
+              </select>
+            </div>
+            <div class="chart-wrap"><svg class="chart-svg" viewBox="0 0 700 210" preserveAspectRatio="none">
+                <g class="chart-grid">
+                  <line x1="20" y1="25" x2="680" y2="25" />
+                  <line x1="20" y1="80" x2="680" y2="80" />
+                  <line x1="20" y1="135" x2="680" y2="135" />
+                  <line x1="20" y1="190" x2="680" y2="190" />
+                </g>
+                <path
+                  d="M20,158 C75,135 100,153 130,125 S180,102 220,128 S270,145 315,90 S370,75 410,98 S470,40 505,70 S560,92 590,50 S640,28 680,38 L680,190 L20,190Z"
+                  fill="#665cf615" />
+                <path
+                  d="M20,158 C75,135 100,153 130,125 S180,102 220,128 S270,145 315,90 S370,75 410,98 S470,40 505,70 S560,92 590,50 S640,28 680,38"
+                  fill="none" stroke="#665cf6" stroke-width="3" stroke-linecap="round" />
+                <circle cx="680" cy="38" r="5" fill="#fff" stroke="#665cf6" stroke-width="3" />
+              </svg></div>
+            <div class="chart-labels">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h2>Overall progress</h2>
+                <p>Across all your learning</p>
+              </div><button class="link-btn" data-page="skills">Details</button>
+            </div>
+            <div class="donut-area">
+              <div class="donut"><b id="donutValue">68%</b><span>complete</span></div>
+              <div class="legend">
+                <div><i class="dot purple"></i>Completed <b id="legendDone">68%</b></div>
+                <div><i class="dot teal"></i>In progress <b>24%</b></div>
+                <div><i class="dot gray"></i>Not started <b>8%</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-grid">
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h2>Skill progress</h2>
+                <p>See how your skills are growing</p>
+              </div><button class="link-btn" data-page="skills">View all</button>
+            </div>
+            <div class="skill-list" id="dashSkills"></div>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h2>Today's focus</h2>
+                <p>Your next steps for today</p>
+              </div><button class="link-btn" data-page="tasks">View all</button>
+            </div>
+            <div class="skill-list" id="dashTasks"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="skills">
+        <div class="section-title">
+          <div>
+            <h2>My Skills</h2>
+            <p>Build your toolkit, one skill at a time.</p>
+          </div><button class="primary-btn" data-modal="skill">＋ Add skill</button>
+        </div>
+        <div class="toolbar">
+          <div class="search"><span>⌕</span><input id="skillSearch" placeholder="Search skills..."></div><select
+            class="filter" id="skillFilter">
+            <option value="all">All progress</option>
+            <option value="started">In progress</option>
+            <option value="complete">Completed</option>
+          </select>
+        </div>
+        <div class="collection" id="skillCollection"></div>
+      </section>
+      <section class="page" id="goals">
+        <div class="section-title">
+          <div>
+            <h2>Learning Goals</h2>
+            <p>Turn your ambitions into achievable milestones.</p>
+          </div><button class="primary-btn" data-modal="goal">＋ Add goal</button>
+        </div>
+        <div class="collection" id="goalCollection"></div>
+      </section>
+      <section class="page" id="tasks">
+        <div class="section-title">
+          <div>
+            <h2>Daily Tasks</h2>
+            <p>Make time for what moves you forward.</p>
+          </div><button class="primary-btn" data-modal="task">＋ Add task</button>
+        </div>
+        <div class="card tasks-card">
+          <div class="card-head">
+            <div>
+              <h2 id="taskHeading">Today's tasks</h2>
+              <p id="taskProgressText">Stay consistent to build your streak.</p>
+            </div><span class="tag" id="taskCountTag">0 tasks</span>
+          </div>
+          <div class="skill-list" id="taskCollection"></div>
+        </div>
+      </section>
+      <section class="page" id="notes">
+        <div class="section-title">
+          <div>
+            <h2>Personal Notes</h2>
+            <p>Capture ideas, reflections and useful resources.</p>
+          </div><button class="primary-btn" data-modal="note">＋ New note</button>
+        </div>
+        <div class="notes-wrap" id="noteCollection"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Add skill</h2><button class="close" id="closeModal">×</button>
+      </div>
+      <form id="entryForm">
+        <div class="form-grid" id="formFields"></div>
+        <div class="modal-actions"><button type="button" class="ghost-btn" id="cancelModal">Cancel</button><button
+            class="primary-btn" type="submit">Save changes</button></div>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>

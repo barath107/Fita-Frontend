@@ -1,0 +1,2552 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <style>
+    .navbar{
+      background-color: royalblue ! important;
+      background-image: no-repeat;
+    }
+    .d-block{
+      height: 500px;
+      width: 50%;
+    }
+    .hlo{
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+</style>
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/swiggy.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/s1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/s2.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+ 
+  
+</div>
+
+<div class="hlo">
+<i class="bi bi-instagram"></i>
+
+<i class="bi bi-youtube"></i>
+
+<i class="bi bi-github"></i>
+
+</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodHub - Food Delivery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #1d2430;
+            background: #ffffff;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            height: 75px;
+            border-bottom: 1px solid #eeeeee;
+            background: white;
+
+            display: flex;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            width: 88%;
+            max-width: 1250px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #f26b38;
+            color: white;
+
+            border-radius: 10px;
+
+            margin-right: 7px;
+        }
+
+        .logo span {
+            color: #f26b38;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #626b78;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #f26b38;
+        }
+
+        .cart-btn {
+            border: none;
+            background: #1d2430;
+            color: white;
+
+            padding: 10px 17px;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+        }
+
+        .cart-count {
+            background: #f26b38;
+            padding: 3px 7px;
+            border-radius: 20px;
+            margin-left: 5px;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 580px;
+
+            background: #fff8f1;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            padding: 70px 8%;
+        }
+
+        .eyebrow {
+            color: #f26b38;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 72px;
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #f26b38;
+        }
+
+        .hero-text {
+            color: #737b86;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            max-width: 500px;
+
+            margin-bottom: 30px;
+        }
+
+        .primary-btn {
+            border: none;
+
+            background: #f26b38;
+            color: white;
+
+            padding: 15px 25px;
+
+            border-radius: 12px;
+
+            font-weight: 700;
+            font-size: 15px;
+
+            box-shadow: 0 12px 25px rgba(242, 107, 56, 0.2);
+
+            transition: 0.2s;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero food */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .food-circle {
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            box-shadow: 0 30px 70px rgba(80, 50, 30, 0.15);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 170px;
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+        }
+
+        /* =========================
+           SEARCH
+        ========================== */
+
+        .search-area {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            width: 500px;
+
+            border: 1px solid #e7e7e7;
+
+            border-radius: 12px;
+
+            padding: 14px 18px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+
+            width: 100%;
+
+            font-size: 15px;
+        }
+
+        /* =========================
+           CATEGORY
+        ========================== */
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 10px 18px;
+
+            border: 1px solid #e6e6e6;
+
+            background: white;
+
+            border-radius: 30px;
+
+            color: #666;
+
+            font-weight: 600;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #1d2430;
+            color: white;
+        }
+
+        /* =========================
+           FOOD GRID
+        ========================== */
+
+        .food-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .food-card {
+            border: 1px solid #eeeeee;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background: white;
+
+            transition: 0.25s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 20px 45px rgba(20, 20, 20, 0.08);
+        }
+
+        .food-image {
+            height: 210px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.3s;
+        }
+
+        .food-card:hover .food-image img {
+            transform: scale(1.05);
+        }
+
+        .rating {
+            position: absolute;
+
+            top: 12px;
+            right: 12px;
+
+            background: white;
+
+            padding: 7px 10px;
+
+            border-radius: 8px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .food-content {
+            padding: 20px;
+        }
+
+        .food-name-price {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+        .food-name-price h3 {
+            font-size: 18px;
+        }
+
+        .food-price {
+            color: #f26b38;
+            font-weight: 800;
+        }
+
+        .restaurant {
+            color: #7b838e;
+            font-size: 13px;
+
+            margin: 7px 0;
+        }
+
+        .description {
+            color: #777;
+
+            font-size: 13px;
+            line-height: 1.5;
+
+            min-height: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .add-cart {
+            width: 100%;
+
+            padding: 11px;
+
+            background: white;
+
+            border: 1px solid #e6e6e6;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .add-cart:hover {
+            color: #f26b38;
+
+            border-color: #f26b38;
+        }
+
+        /* =========================
+           WHY FOODHUB
+        ========================== */
+
+        .why-section {
+            background: #faf8f5;
+        }
+
+        .benefits {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .benefit {
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .benefit h3 {
+            margin-bottom: 10px;
+        }
+
+        .benefit p {
+            color: #777;
+
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CART MODAL
+        ========================== */
+
+        .cart-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.45);
+
+            display: none;
+
+            justify-content: flex-end;
+
+            z-index: 2000;
+        }
+
+        .cart-overlay.show {
+            display: flex;
+        }
+
+        .cart-panel {
+            width: 430px;
+
+            max-width: 100%;
+
+            height: 100%;
+
+            background: white;
+
+            padding: 30px;
+
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+        }
+
+        .cart-header h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+        }
+
+        .close-cart {
+            border: none;
+
+            background: #f2f2f2;
+
+            width: 35px;
+            height: 35px;
+
+            border-radius: 50%;
+
+            font-size: 20px;
+        }
+
+        .cart-item {
+            display: grid;
+
+            grid-template-columns: 65px 1fr auto;
+
+            gap: 12px;
+
+            align-items: center;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .cart-item img {
+            width: 65px;
+            height: 65px;
+
+            border-radius: 10px;
+
+            object-fit: cover;
+        }
+
+        .cart-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: #f26b38;
+
+            font-weight: 700;
+        }
+
+        .quantity {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 7px;
+        }
+
+        .quantity button {
+            width: 25px;
+            height: 25px;
+
+            border: 1px solid #ddd;
+
+            background: white;
+
+            border-radius: 5px;
+        }
+
+        .cart-total {
+            margin-top: 25px;
+
+            border-top: 1px solid #ddd;
+
+            padding-top: 20px;
+        }
+
+        .total-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 12px;
+        }
+
+        .total-row.grand {
+            font-size: 20px;
+
+            font-weight: 800;
+
+            margin-top: 15px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #f26b38;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+        }
+
+        .empty-cart {
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: #777;
+        }
+
+        /* =========================
+           CHECKOUT
+        ========================== */
+
+        .checkout-section {
+            background: #fffaf5;
+        }
+
+        .checkout-box {
+            max-width: 700px;
+
+            margin: auto;
+
+            background: white;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 18px;
+
+            padding: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid #ddd;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #f26b38;
+        }
+
+        .payment-options {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .payment-option {
+            border: 1px solid #ddd;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        .payment-option input {
+            margin-right: 5px;
+        }
+
+        /* =========================
+           ORDERS
+        ========================== */
+
+        .orders {
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .order-card {
+            border: 1px solid #eee;
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+            margin-bottom: 15px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .order-status {
+            background: #e9f8f0;
+
+            color: #23865a;
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #1d2430;
+
+            color: white;
+
+            padding: 50px 0;
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .footer-text {
+            color: #aeb5c0;
+
+            margin-top: 12px;
+
+            max-width: 400px;
+        }
+
+        .copyright {
+            color: #7f8792;
+
+            margin-top: 35px;
+
+            text-align: center;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #343b47;
+        }
+
+        /* =========================
+           TOAST
+        ========================== */
+
+        .toast {
+            position: fixed;
+
+            bottom: 25px;
+            right: 25px;
+
+            background: #1d2430;
+
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            transform: translateY(100px);
+
+            opacity: 0;
+
+            transition: 0.3s;
+
+            z-index: 3000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width: 900px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero-text {
+                margin: auto auto 30px;
+            }
+
+            .hero-image {
+                margin-top: 50px;
+            }
+
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .food-circle {
+                width: 270px;
+                height: 270px;
+
+                font-size: 120px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .cart-panel {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-box">F</span>
+            Food<span>Hub</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#menu">Menu</a>
+            </li>
+
+            <li>
+                <a href="#why">Why FoodHub</a>
+            </li>
+
+            <li>
+                <button class="cart-btn" onclick="openCart()">
+                    🛒 Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <p class="eyebrow">
+            DELIVERED FRESH • DELIVERED FAST
+        </p>
+
+        <h1>
+            Good food.<br>
+            <span>Good mood.</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover delicious food from your favourite restaurants
+            and get it delivered directly to your doorstep.
+        </p>
+
+        <a href="#menu">
+            <button class="primary-btn">
+                Explore Food ↓
+            </button>
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="food-circle">
+            🍛
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENU
+========================== -->
+
+<section id="menu">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p class="eyebrow">
+                EXPLORE MENU
+            </p>
+
+            <h2>
+                What are you craving?
+            </h2>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-area">
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search dishes or restaurants..."
+                    onkeyup="searchFood()"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="categories">
+
+            <button
+                class="category-btn active"
+                onclick="filterCategory('All', this)"
+            >
+                All
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('Biryani', this)"
+            >
+                🍛 Biryani
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('Pizza', this)"
+            >
+                🍕 Pizza
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('Burger', this)"
+            >
+                🍔 Burger
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('South Indian', this)"
+            >
+                🥘 South Indian
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('Dessert', this)"
+            >
+                🍰 Desserts
+            </button>
+
+        </div>
+
+
+        <!-- FOOD -->
+
+        <div
+            class="food-grid"
+            id="foodGrid"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY FOODHUB
+========================== -->
+
+<section
+    class="why-section"
+    id="why"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p class="eyebrow">
+                WHY FOODHUB
+            </p>
+
+            <h2>
+                Made for food lovers
+            </h2>
+
+        </div>
+
+
+        <div class="benefits">
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    🍽️
+                </div>
+
+                <h3>
+                    Curated Choices
+                </h3>
+
+                <p>
+                    Discover popular dishes and
+                    local favourites in one place.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Delivery
+                </h3>
+
+                <p>
+                    Simple ordering experience
+                    with quick food delivery.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Secure Checkout
+                </h3>
+
+                <p>
+                    Your order information is
+                    handled securely.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHECKOUT
+========================== -->
+
+<section
+    class="checkout-section"
+    id="checkout"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p class="eyebrow">
+                CHECKOUT
+            </p>
+
+            <h2>
+                Complete your order
+            </h2>
+
+        </div>
+
+
+        <div class="checkout-box">
+
+            <form
+                onsubmit="placeOrder(event)"
+            >
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customerAddress"
+                        rows="4"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <h3 style="margin-bottom:15px;">
+                    Payment Method
+                </h3>
+
+
+                <div class="payment-options">
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            checked
+                        >
+
+                        💵 Cash
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                        >
+
+                        💳 Card
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                        >
+
+                        📱 UPI
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    style="width:100%;"
+                >
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ORDERS
+========================== -->
+
+<section id="orders">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p class="eyebrow">
+                ORDER HISTORY
+            </p>
+
+            <h2>
+                My Orders
+            </h2>
+
+        </div>
+
+
+        <div
+            class="orders"
+            id="ordersContainer"
+        >
+
+            <p
+                style="
+                text-align:center;
+                color:#777;
+                "
+            >
+                No orders yet.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <div class="logo">
+                    Food<span>Hub</span>
+                </div>
+
+                <p class="footer-text">
+                    Fresh food. Simple ordering.
+                    Built as a full-stack food
+                    delivery project.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    FoodHub
+                </h3>
+
+                <p class="footer-text">
+                    Home
+                    <br>
+                    Menu
+                    <br>
+                    Orders
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 FoodHub. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     CART
+========================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCartOutside(event)"
+>
+
+    <div
+        class="cart-panel"
+        onclick="event.stopPropagation()"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems">
+
+        </div>
+
+
+        <div
+            class="cart-total"
+            id="cartTotal"
+        >
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TOAST
+========================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Added to cart!
+</div>
+
+
+<script>
+
+    /* =========================
+       FOOD DATA
+    ========================== */
+
+    const foods = [
+
+        {
+            id: 1,
+            name: "Chicken Biryani",
+            category: "Biryani",
+            price: 220,
+            restaurant: "Spice Route",
+            rating: 4.8,
+            image:
+            "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Fragrant basmati rice with tender chicken and aromatic spices."
+        },
+
+        {
+            id: 2,
+            name: "Margherita Pizza",
+            category: "Pizza",
+            price: 249,
+            restaurant: "Oven Story",
+            rating: 4.7,
+            image:
+            "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Classic pizza with tomato, mozzarella and fresh basil."
+        },
+
+        {
+            id: 3,
+            name: "Veg Burger",
+            category: "Burger",
+            price: 159,
+            restaurant: "Burger Lab",
+            rating: 4.5,
+            image:
+            "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Crispy veggie patty with lettuce, tomato and special sauce."
+        },
+
+        {
+            id: 4,
+            name: "Masala Dosa",
+            category: "South Indian",
+            price: 120,
+            restaurant: "Madras Bowl",
+            rating: 4.9,
+            image:
+            "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Crispy dosa with potato masala, sambar and chutneys."
+        },
+
+        {
+            id: 5,
+            name: "Paneer Tikka",
+            category: "South Indian",
+            price: 180,
+            restaurant: "Urban Tadka",
+            rating: 4.6,
+            image:
+            "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Soft paneer pieces grilled with Indian spices and vegetables."
+        },
+
+        {
+            id: 6,
+            name: "Chocolate Brownie",
+            category: "Dessert",
+            price: 110,
+            restaurant: "Sweet Spot",
+            rating: 4.8,
+            image:
+            "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=900&q=80",
+            description:
+            "Warm and rich chocolate brownie with a fudgy centre."
+        }
+
+    ];
+
+
+    /* =========================
+       CART
+    ========================== */
+
+    let cart = [];
+
+
+    /* =========================
+       DISPLAY FOOD
+    ========================== */
+
+    function displayFoods(foodList) {
+
+        const foodGrid =
+            document.getElementById("foodGrid");
+
+        foodGrid.innerHTML = "";
+
+
+        if (foodList.length === 0) {
+
+            foodGrid.innerHTML = `
+                <p style="
+                    grid-column:1/-1;
+                    text-align:center;
+                    padding:50px;
+                    color:#777;
+                ">
+                    No food found.
+                </p>
+            `;
+
+            return;
+        }
+
+
+        foodList.forEach(food => {
+
+            foodGrid.innerHTML += `
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="${food.image}"
+                            alt="${food.name}"
+                        >
+
+                        <span class="rating">
+                            ★ ${food.rating}
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <div class="food-name-price">
+
+                            <h3>
+                                ${food.name}
+                            </h3>
+
+                            <span class="food-price">
+                                ₹${food.price}
+                            </span>
+
+                        </div>
+
+
+                        <p class="restaurant">
+                            ${food.restaurant}
+                            •
+                            ${food.category}
+                        </p>
+
+
+                        <p class="description">
+                            ${food.description}
+                        </p>
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(${food.id})"
+                        >
+
+                            Add to cart
+
+                            <span>
+                                +
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+
+    /* =========================
+       ADD TO CART
+    ========================== */
+
+    function addToCart(id) {
+
+        const food =
+            foods.find(item => item.id === id);
+
+
+        const existing =
+            cart.find(item => item.id === id);
+
+
+        if (existing) {
+
+            existing.quantity++;
+
+        } else {
+
+            cart.push({
+
+                ...food,
+
+                quantity: 1
+
+            });
+
+        }
+
+
+        updateCart();
+
+        showToast(
+            food.name + " added to cart!"
+        );
+
+    }
+
+
+    /* =========================
+       UPDATE CART
+    ========================== */
+
+    function updateCart() {
+
+        const cartCount =
+            document.getElementById("cartCount");
+
+
+        const totalQuantity =
+            cart.reduce(
+                (total, item) =>
+                total + item.quantity,
+                0
+            );
+
+
+        cartCount.innerText =
+            totalQuantity;
+
+
+        displayCart();
+
+    }
+
+
+    /* =========================
+       DISPLAY CART
+    ========================== */
+
+    function displayCart() {
+
+        const cartItems =
+            document.getElementById("cartItems");
+
+        const cartTotal =
+            document.getElementById("cartTotal");
+
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML = `
+
+                <div class="empty-cart">
+
+                    🛒
+
+                    <h3>
+                        Your cart is empty
+                    </h3>
+
+                    <p>
+                        Add some delicious food!
+                    </p>
+
+                </div>
+
+            `;
+
+            cartTotal.innerHTML = "";
+
+            return;
+
+        }
+
+
+        cartItems.innerHTML = "";
+
+
+        cart.forEach(item => {
+
+            cartItems.innerHTML += `
+
+                <div class="cart-item">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                    >
+
+
+                    <div>
+
+                        <h4>
+                            ${item.name}
+                        </h4>
+
+                        <span class="cart-item-price">
+                            ₹${item.price}
+                        </span>
+
+
+                        <div class="quantity">
+
+                            <button
+                                onclick="changeQuantity(
+                                    ${item.id},
+                                    -1
+                                )"
+                            >
+                                −
+                            </button>
+
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+
+                            <button
+                                onclick="changeQuantity(
+                                    ${item.id},
+                                    1
+                                )"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <strong>
+                        ₹${item.price * item.quantity}
+                    </strong>
+
+                </div>
+
+            `;
+
+        });
+
+
+        calculateTotal();
+
+    }
+
+
+    /* =========================
+       QUANTITY
+    ========================== */
+
+    function changeQuantity(id, amount) {
+
+        const item =
+            cart.find(item => item.id === id);
+
+
+        if (!item) return;
+
+
+        item.quantity += amount;
+
+
+        if (item.quantity <= 0) {
+
+            cart =
+                cart.filter(
+                    item => item.id !== id
+                );
+
+        }
+
+
+        updateCart();
+
+    }
+
+
+    /* =========================
+       TOTAL
+    ========================== */
+
+    function calculateTotal() {
+
+        const subtotal =
+            cart.reduce(
+                (total, item) =>
+                total +
+                item.price *
+                item.quantity,
+                0
+            );
+
+
+        const delivery = 40;
+
+
+        const total =
+            subtotal + delivery;
+
+
+        document.getElementById(
+            "cartTotal"
+        ).innerHTML = `
+
+            <div class="total-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong>
+                    ₹${subtotal}
+                </strong>
+
+            </div>
+
+
+            <div class="total-row">
+
+                <span>
+                    Delivery
+                </span>
+
+                <strong>
+                    ₹${delivery}
+                </strong>
+
+            </div>
+
+
+            <div class="total-row grand">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    ₹${total}
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-btn"
+                onclick="goToCheckout()"
+            >
+                Proceed to Checkout
+            </button>
+
+        `;
+
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================== */
+
+    function searchFood() {
+
+        const search =
+            document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase();
+
+
+        const filtered =
+            foods.filter(food =>
+
+                food.name
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                food.restaurant
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                food.category
+                    .toLowerCase()
+                    .includes(search)
+
+            );
+
+
+        displayFoods(filtered);
+
+    }
+
+
+    /* =========================
+       CATEGORY FILTER
+    ========================== */
+
+    function filterCategory(
+        category,
+        button
+    ) {
+
+        document
+            .querySelectorAll(
+                ".category-btn"
+            )
+            .forEach(btn =>
+                btn.classList.remove(
+                    "active"
+                )
+            );
+
+
+        button.classList.add("active");
+
+
+        if (category === "All") {
+
+            displayFoods(foods);
+
+            return;
+
+        }
+
+
+        const filtered =
+            foods.filter(
+                food =>
+                food.category === category
+            );
+
+
+        displayFoods(filtered);
+
+    }
+
+
+    /* =========================
+       CART OPEN
+    ========================== */
+
+    function openCart() {
+
+        document
+            .getElementById("cartOverlay")
+            .classList.add("show");
+
+        displayCart();
+
+    }
+
+
+    /* =========================
+       CART CLOSE
+    ========================== */
+
+    function closeCart() {
+
+        document
+            .getElementById("cartOverlay")
+            .classList.remove("show");
+
+    }
+
+
+    function closeCartOutside(event) {
+
+        if (
+            event.target.id ===
+            "cartOverlay"
+        ) {
+
+            closeCart();
+
+        }
+
+    }
+
+
+    /* =========================
+       CHECKOUT
+    ========================== */
+
+    function goToCheckout() {
+
+        if (cart.length === 0) {
+
+            showToast(
+                "Your cart is empty!"
+            );
+
+            return;
+
+        }
+
+
+        closeCart();
+
+
+        document
+            .getElementById("checkout")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =========================
+       PLACE ORDER
+    ========================== */
+
+    function placeOrder(event) {
+
+        event.preventDefault();
+
+
+        if (cart.length === 0) {
+
+            showToast(
+                "Add food to your cart first!"
+            );
+
+            return;
+
+        }
+
+
+        const name =
+            document
+            .getElementById(
+                "customerName"
+            ).value;
+
+
+        const phone =
+            document
+            .getElementById(
+                "customerPhone"
+            ).value;
+
+
+        const address =
+            document
+            .getElementById(
+                "customerAddress"
+            ).value;
+
+
+        const subtotal =
+            cart.reduce(
+                (total, item) =>
+                total +
+                item.price *
+                item.quantity,
+                0
+            );
+
+
+        const total =
+            subtotal + 40;
+
+
+        const order = {
+
+            id:
+                "FH" +
+                Date.now()
+                .toString()
+                .slice(-6),
+
+            customer:
+                name,
+
+            phone:
+                phone,
+
+            address:
+                address,
+
+            items:
+                [...cart],
+
+            total:
+                total,
+
+            status:
+                "Order Placed",
+
+            date:
+                new Date()
+                .toLocaleString()
+
+        };
+
+
+        saveOrder(order);
+
+
+        cart = [];
+
+        updateCart();
+
+
+        document
+            .querySelector(
+                "#checkout form"
+            )
+            .reset();
+
+
+        showToast(
+            "🎉 Order placed successfully!"
+        );
+
+
+        displayOrders();
+
+
+        document
+            .getElementById("orders")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =========================
+       LOCAL STORAGE
+    ========================== */
+
+    function saveOrder(order) {
+
+        let orders =
+            JSON.parse(
+                localStorage.getItem(
+                    "foodhubOrders"
+                )
+            ) || [];
+
+
+        orders.push(order);
+
+
+        localStorage.setItem(
+            "foodhubOrders",
+            JSON.stringify(orders)
+        );
+
+    }
+
+
+    /* =========================
+       DISPLAY ORDERS
+    ========================== */
+
+    function displayOrders() {
+
+        const container =
+            document.getElementById(
+                "ordersContainer"
+            );
+
+
+        const orders =
+            JSON.parse(
+                localStorage.getItem(
+                    "foodhubOrders"
+                )
+            ) || [];
+
+
+        if (orders.length === 0) {
+
+            container.innerHTML = `
+
+                <p style="
+                    text-align:center;
+                    color:#777;
+                ">
+                    No orders yet.
+                </p>
+
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML = "";
+
+
+        orders.reverse().forEach(order => {
+
+            container.innerHTML += `
+
+                <div class="order-card">
+
+                    <div>
+
+                        <small>
+                            Order ID:
+                            ${order.id}
+                        </small>
+
+                        <h3>
+                            ${order.customer}
+                        </h3>
+
+                        <p>
+                            ${order.date}
+                        </p>
+
+                        <p>
+                            ${order.items.length}
+                            item(s)
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ₹${order.total}
+                        </strong>
+
+                        <br><br>
+
+                        <span class="order-status">
+                            ${order.status}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+    }
+
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById(
+                "toast"
+            );
+
+
+        toast.innerText =
+            message;
+
+
+        toast.classList.add("show");
+
+
+        setTimeout(() => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        }, 2500);
+
+    }
+
+
+    /* =========================
+       INITIAL LOAD
+    ========================== */
+
+    displayFoods(foods);
+
+    updateCart();
+
+    displayOrders();
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

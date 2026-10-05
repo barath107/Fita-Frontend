@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .c{
+            color:yellow;
+    }
+    </style>
+
+    <p id="p1"></p>
+    <button id="btn1" onclick="getAPI()">Write</button>
+
+    <div id="d1">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#p1').text("This is from JQuery")
+                $('#p1').addClass('c')
+            })
+        })
+
+
+
+        function getAPI(){
+            fetch("https://jsonplaceholder.typicode.com/users").then((res)=> res.json()).then((re)=>{
+                console.log(re);
+                for(let i=0;i<re.length;i++){
+                    let newPtag = document.createElement("p")
+                    newPtag.innerText = re[i].name;
+                    document.getElementById("d1").append(newPtag)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
